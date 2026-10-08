@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karla Malveira | Portfólio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFE3EE; --soft:#FFC2DA; --hot:#FF3D8B; --dark:#2B0A1C; --dark-ink:#FFE3EE; --ink:#2B0A1C; --card:#FFFFFF;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#1E0715;--soft:#4A1633;--hot:#FF5C9E;--dark:#38101F;--dark-ink:#FFE3EE;--ink:#FFE3EE;--card:#2B0A1C}
+}
+:root[data-theme="dark"]{--bg:#1E0715;--soft:#4A1633;--hot:#FF5C9E;--dark:#38101F;--dark-ink:#FFE3EE;--ink:#FFE3EE;--card:#2B0A1C}
+html{scroll-padding-top:4rem;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.1rem/1.6 Figtree,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Unbounded,system-ui,sans-serif;margin:0;font-weight:800;letter-spacing:-.03em}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--hot);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:2px solid var(--ink)}
+.top .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:.8rem;padding-bottom:.8rem}
+.top b{font-family:Unbounded,sans-serif;font-weight:800}
+.top nav{display:flex;gap:1.25rem;font-weight:600}
+.top nav a{text-decoration:none}.top nav a:hover{color:var(--hot)}
+
+.hero{padding:clamp(2.5rem,7vw,5rem) 0 clamp(2.5rem,6vw,4rem);position:relative}
+.hero h1{font-size:clamp(2.7rem,12.4vw,9.5rem);line-height:.92}
+.hero h1 span{display:block}
+.hero h1 .l2{color:var(--hot);padding-left:clamp(0rem,6vw,5rem)}
+.hero p{max-width:30rem;font-size:1.3rem;margin:2rem 0 0}
+.sticker{position:absolute;right:clamp(1rem,5vw,4rem);bottom:clamp(1rem,4vw,3rem);background:var(--hot);color:#fff;border:2px solid var(--ink);border-radius:999px;padding:.9rem 1.4rem;font-family:Unbounded,sans-serif;font-weight:800;font-size:.95rem;transform:rotate(-7deg);text-align:center;line-height:1.2}
+@media(max-width:700px){.sticker{position:static;display:inline-block;margin-top:1.5rem}}
+
+.band{background:var(--dark);color:var(--dark-ink);padding:clamp(2.5rem,6vw,4.5rem) 0}
+.band p{font-family:Unbounded,sans-serif;font-weight:500;font-size:clamp(1.3rem,3.4vw,2.4rem);line-height:1.25;letter-spacing:-.02em;margin:0;max-width:52rem}
+.band em{font-style:normal;color:var(--hot)}
+
+section.s{padding:clamp(2.5rem,6vw,4.5rem) 0}
+h2{font-size:clamp(2rem,6vw,3.6rem);margin-bottom:2rem}
+.row{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:1.5rem;align-items:baseline;padding:1.4rem 0;border-top:2px solid var(--ink)}
+.row:last-child{border-bottom:2px solid var(--ink)}
+.row .when{font-family:Unbounded,sans-serif;font-weight:800;color:var(--hot);font-size:1.05rem}
+.row h3{font-size:clamp(1.3rem,3vw,2rem)}
+.row p{margin:.3rem 0 0;max-width:34rem}
+@media(max-width:600px){.row{grid-template-columns:1fr;gap:.3rem}}
+
+.skills{background:var(--soft)}
+.words{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin:0;padding:0;list-style:none;font-family:Unbounded,sans-serif;font-weight:800;font-size:clamp(1.8rem,6.5vw,4.2rem);letter-spacing:-.04em;line-height:1.1}
+.words li:nth-child(3n+2){color:var(--hot)}
+
+.tiles{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.tile{border:2px solid var(--ink);border-radius:28px;padding:1.75rem;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;background:var(--card)}
+.tile.a{background:var(--hot);color:#fff}
+.tile.b{background:var(--dark);color:var(--dark-ink)}
+.tile h3{font-size:clamp(1.5rem,3.5vw,2.2rem)}
+.tile p{margin:.8rem 0 0}
+.tile small{font-weight:600;opacity:.85}
+
+.contact{background:var(--hot);color:#fff;padding:clamp(3rem,7vw,5rem) 0}
+.contact h2{margin-bottom:1.5rem}
+.contact a{display:block;font-family:Unbounded,sans-serif;font-weight:800;font-size:clamp(1.15rem,4.4vw,2.6rem);letter-spacing:-.03em;overflow-wrap:anywhere;margin-bottom:.6rem;text-decoration-thickness:3px;text-underline-offset:6px}
+footer{padding:1.5rem 0;font-weight:600}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero h1 span{animation:up .8s cubic-bezier(.2,.8,.2,1) both}
+  .hero h1 .l2{animation-delay:.15s}
+  .sticker{animation:pop .5s .8s cubic-bezier(.3,1.6,.5,1) both}
+  @keyframes up{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  @keyframes pop{from{opacity:0;transform:rotate(-7deg) scale(.4)}to{opacity:1;transform:rotate(-7deg) scale(1)}}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <b>KM</b>
+  <nav aria-label="Seções"><a href="#trajetoria">Trajetória</a><a href="#habilidades">Habilidades</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a></nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <h1><span>Karla</span><span class="l2">Malveira</span></h1>
+  <p>Desenvolvedora full stack em formação. Estudante de Sistemas de Informação na UFAC.</p>
+  <div class="sticker">Web Academy<br>Motorola</div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <p>Estou no 5º período na Universidade Federal do Acre. Já trabalhei com <em>IoT e Big Data</em> e agora aprendo a construir sistemas web completos, do <em>front ao back</em>.</p>
+</div></section>
+
+<section class="s" id="trajetoria"><div class="wrap">
+  <h2>Trajetória</h2>
+  <div>
+    <div class="row"><span class="when">Agora</span><div><h3>Web Academy, Motorola</h3><p>Curso de Desenvolvedor Full Stack.</p></div></div>
+    <div class="row"><span class="when">Concluído</span><div><h3>IoT sobre Big Data</h3><p>Coleta de dados de dispositivos conectados e análise em grande volume.</p></div></div>
+    <div class="row"><span class="when">Em curso</span><div><h3>Sistemas de Informação</h3><p>Universidade Federal do Acre, 5º período.</p></div></div>
+  </div>
+</div></section>
+
+<section class="s skills" id="habilidades"><div class="wrap">
+  <h2>Habilidades</h2>
+  <ul class="words"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>IoT</li><li>Big Data</li></ul>
+</div></section>
+
+<section class="s" id="projetos"><div class="wrap">
+  <h2>Projetos</h2>
+  <div class="tiles">
+    <article class="tile a"><div><h3>IoT e Big Data</h3><p>Descreva aqui o que você construiu, as tecnologias usadas e o resultado.</p></div><small>Em breve: link no GitHub</small></article>
+    <article class="tile b"><div><h3>Projeto Web Academy</h3><p>Descreva aqui o site ou app full stack que você desenvolveu no curso.</p></div><small>Em breve: link no GitHub</small></article>
+  </div>
+</div></section>
+
+<section class="contact" id="contato"><div class="wrap">
+  <h2>Vamos conversar</h2>
+  <a href="mailto:karla.moura@sou.ufac.br">karla.moura@sou.ufac.br</a>
+  <a href="https://github.com/karlamoura14">github.com/karlamoura14</a>
+</div></section>
+</main>
+<footer><div class="wrap">Karla Malveira, Rio Branco, Acre.</div></footer>
+</body>
+</html>
